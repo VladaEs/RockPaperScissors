@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            RockPaperScissors
+        </title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Almendra:wght@400;700&family=Atma&family=Nova+Cut&display=swap" rel="stylesheet">
+    </head>
+<body>
+
+    <div class="bodyWrapper">
+        <div class="blockBackground">
+
+
+            <span class="GameName">
+                <span>Rock</span>
+                <span>Paper</span>
+                <span>Scissors</span>
+            </span>
+
+            <div class="score">
+                <span class="playerScore">0</span>
+                <span >:</span>
+                <span class="opponentScore">0</span>
+            </div>
+            <div class="DisplayArea">
+                <div class="Player sideGameArea">
+                    <div class="PlayerImageWrapper">
+                        <img class="PlayerImage">
+                    </div>
+                </div>
+                <div class="Opponent sideGameArea">
+                    <div class="loadingComputer">
+                        <span>Computer deciding</span>
+                        <div class="custom-loader"></div>
+                    </div>
+                    <div class="OpponentImageWrapper wrappersImages">
+                        <img class="OpponentImage">
+                    </div>
+                </div>
+            </div>
+            <div class="ButtonsChoose">
+                <img src="Images/paper.png" class="controls" data-item="paper">
+                <img src="Images/rock.png" class="controls" data-item="rock">
+                <img src="Images/scissors.png" class="controls" data-item="scissors">
+            </div>
+        <button class="RefreshButton">Refresh score</button>
+
+
+            
+
+        </div>
+    </div>
+<script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+html{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #90b4d4, #5a89cf, #accad5, #1eb6f8);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+.blockBackground{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+   
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.GameName{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color:#fff;
+    font-size: 45px;
+}
+
+.GameName span:nth-child(1){
+    font-family: 'Almendra', serif;
+    font-weight: 400;
+}
+
+.GameName span:nth-child(2){
+    font-family: 'Atma', cursive;
+    font-weight: 400;
+}
+.GameName span:nth-child(3){
+    font-family: 'Nova Cut', cursive;
+    font-weight: 400;
+    
+}
+
+.DisplayArea{
+    box-sizing:border-box;
+    margin-top:2%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    grid-gap: 15px;
+    width: 60%;
+    height: 500px;
+    border: 4px solid #fff;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 500px;
+    overflow: hidden;
+}
+.score{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    color:#fff;
+    font-weight: 400;
+    font-size: 30px;
+}
+ .sideGameArea{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.PlayerImageWrapper{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s all ease-out;
+    transform: translate(-300%);
+}
+.PlayerImageWrapper img{
+    position: relative;
+    width: 50%;
+}
+.inactiveImg{
+    pointer-events: none;
+}
+.OpponentImageWrapper img{
+    position: relative;
+    width: 50%;
+}
+.PlayerActive{
+    transform: translate(0);
+}
+
+.OpponentImageWrapper{
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s all ease-out;
+    transform: translate(300%);
+}
+.OpponentActive{
+    transform: translate(0);
+}
+.loadingComputer{
+    flex-shrink: 0;
+    top:-15px;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 15px;
+    color: #fff;
+    font-family: 'Almendra', serif;
+    font-weight: 400;
+}
+
+.custom-loader {
+    width:50px;
+    height:50px;
+    --c:radial-gradient(farthest-side,#ffffff 92%,#0000);
+    background: 
+      var(--c) 50% 0,
+      var(--c) 50% 100%,
+      var(--c) 100% 50%,
+      var(--c) 0    50%;
+    background-size:12px 12px;
+    background-repeat:no-repeat;
+    animation:s7 1s infinite;
+  }
+  @keyframes s7 {to{transform: rotate(.5turn)}}
+.TextLoadingOpponent{
+    position: relative;
+    display: inline;
+}
+
+.ButtonsChoose{
+    margin-top:3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+.ButtonsChoose img{
+    border: 2px solid #fff;
+    border-radius: 15px;
+    padding: 15px;
+    width: 5%;
+    height: auto;
+    min-width: 50px;
+    cursor:pointer;
+    transition: .3s ease-in-out;
+}
+
+.active{
+    transform: scale(1.4);
+    background-color: #b18edc;
+}
+.inactiveBG{
+    background-color: #7b7b7b54;
+}
+.HalfEctive{
+    transform: scale(1.2);
+}
+.RefreshButton{
+    position: relative;
+    display: block;
+    margin-top: 5%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    transition: .3s all ease-in;
+}
